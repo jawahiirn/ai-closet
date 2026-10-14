@@ -1,0 +1,25 @@
+[project]
+name = "proposal-negotiator"
+version = "0.1.0"
+description = "A research, proposal, and demo-email workflow built with OpenAI Agents and Gradio."
+requires-python = ">=3.12"
+dependencies = [
+    "openai-agents>=0.20.0",
+    "gradio>=6.14.0",
+    "pydantic>=2.13.0",
+    "python-dotenv>=1.2.0",
+    "resend>=2.49.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+    "ruff>=0.8.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
